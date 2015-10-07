@@ -1,0 +1,13 @@
+/* ===========================
+--- Intro HEADER
+============================ */
+
+body{
+	> container{
+		> row {
+			> .nav-content{
+				@import make-xs-column(3);
+			}
+		}	
+	}
+}
