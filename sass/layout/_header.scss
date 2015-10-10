@@ -6,7 +6,7 @@ body{
 	> container{
 		> row {
 			> .nav-content{
-				@import make-xs-column(3);
+				@include make-xs-column(3);
 			}
 		}	
 	}
