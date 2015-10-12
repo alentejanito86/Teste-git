@@ -5,8 +5,8 @@
 */
 /*Base - Base style | variables | mixns | etc */
 /* line 1, D:/web_sergio/sass/base/_base.scss */
-.oculta {
-  display: none;
+body {
+  position: relative;
 }
 
 /* Modules - Individual site components */
