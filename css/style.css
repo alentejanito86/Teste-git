@@ -43,6 +43,10 @@
   /* line 21, ../sass/base/_normalize.scss */
   .hide-sm {
     display: block;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
 }
 @media (min-width: 1200px) {
@@ -52,7 +56,7 @@
   }
 }
 
-/* line 34, ../sass/base/_normalize.scss */
+/* line 38, ../sass/base/_normalize.scss */
 .header-content {
   width: 100%;
   height: 250px;
@@ -99,6 +103,10 @@ html > body .container-web {
   padding: 0;
   margin: 0;
   background-color: rgba(179, 179, 179, 0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 /* line 15, ../sass/vendors/bootstrap/bootstrap/mixins/_clearfix.scss */
 html > body .container-web:before, html > body .container-web:after {
@@ -132,7 +140,7 @@ body > container > row > .nav-content {
   padding-right: 15px;
 }
 
-/* line 1, ../sass/layout/_nav.scss */
+/* line 2, ../sass/layout/_nav.scss */
 .my-menu {
   float: left;
   position: fixed;
@@ -140,39 +148,57 @@ body > container > row > .nav-content {
   width: 50px;
   padding: 0;
   background-color: #b3b3b3;
-  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0);
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0) !important;
   z-index: 4;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 @media (min-width: 992px) {
-  /* line 1, ../sass/layout/_nav.scss */
+  /* line 2, ../sass/layout/_nav.scss */
   .my-menu {
     width: 282px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0) !important;
   }
 }
-/* line 17, ../sass/layout/_nav.scss */
+/* line 23, ../sass/layout/_nav.scss */
 .my-menu > .nav-logo {
-  width: 970px;
-  width: 100%;
-  min-width: 282px;
-  height: 250px;
-  background-color: #29abe2;
-  padding-top: 80px;
-  padding-bottom: 20px;
+  width: 0;
+  height: 0;
+  text-indent: -666em;
+  overflow: hidden;
 }
-/* line 27, ../sass/layout/_nav.scss */
-.my-menu > .nav-logo > h1 {
-  text-align: right;
-  font-size: 45px;
-  margin: 0 0;
+@media (min-width: 992px) {
+  /* line 23, ../sass/layout/_nav.scss */
+  .my-menu > .nav-logo {
+    width: 970px;
+    width: 100%;
+    min-width: 282px;
+    height: 250px;
+    background-color: #29abe2;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  /* line 44, ../sass/layout/_nav.scss */
+  .my-menu > .nav-logo > h1 {
+    text-align: right;
+    font-size: 45px;
+    margin: 0 0;
+  }
+  /* line 50, ../sass/layout/_nav.scss */
+  .my-menu > .nav-logo > h2 {
+    text-align: right;
+    font-size: 15px;
+    padding: 0	0;
+    margin: 0	0;
+  }
 }
-/* line 33, ../sass/layout/_nav.scss */
-.my-menu > .nav-logo > h2 {
-  text-align: right;
-  font-size: 15px;
-  padding: 0	0;
-  margin: 0	0;
-}
-/* line 42, ../sass/layout/_nav.scss */
+/* line 59, ../sass/layout/_nav.scss */
 .my-menu > .nav-body {
   flex: 1 0 auto;
   box-sizing: border-box;
@@ -180,22 +206,23 @@ body > container > row > .nav-content {
   flex-direction: column;
   font-size: 15px;
 }
-/* line 48, ../sass/layout/_nav.scss */
+/* line 65, ../sass/layout/_nav.scss */
 .my-menu > .nav-body a {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   width: 100%;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
+  padding-left: 30%;
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #EEE;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
   text-decoration: none;
 }
-/* line 62, ../sass/layout/_nav.scss */
+/* line 80, ../sass/layout/_nav.scss */
 .my-menu > .nav-body a i {
   padding-right: 15px;
 }
@@ -212,10 +239,19 @@ body > container > row > .nav-content {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   z-index: 3;
-  background-color: rgba(179, 179, 179, 0.8);
+  background-color: rgba(179, 179, 179, 0.7) !important;
   float: left;
   padding-right: 0;
+  padding-left: 50px;
 }
 @media (min-width: 768px) {
   /* line 1, ../sass/layout/_content-web.scss */
@@ -224,9 +260,127 @@ body > container > row > .nav-content {
     width: 100%;
   }
 }
-/* line 10, ../sass/layout/_content-web.scss */
+@media (min-width: 992px) {
+  /* line 1, ../sass/layout/_content-web.scss */
+  .content-web {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1, ../sass/layout/_content-web.scss */
+  .content-web {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 1, ../sass/layout/_content-web.scss */
+  .content-web {
+    padding-left: 282px;
+  }
+}
+/* line 18, ../sass/layout/_content-web.scss */
 .content-web section {
-  margin-left: 16.66667%;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  /* line 18, ../sass/layout/_content-web.scss */
+  .content-web section {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 18, ../sass/layout/_content-web.scss */
+  .content-web section {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 18, ../sass/layout/_content-web.scss */
+  .content-web section {
+    float: left;
+    width: 100%;
+  }
+}
+/* line 29, ../sass/layout/_content-web.scss */
+.content-web section > header {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+@media (min-width: 768px) {
+  /* line 29, ../sass/layout/_content-web.scss */
+  .content-web section > header {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 29, ../sass/layout/_content-web.scss */
+  .content-web section > header {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 29, ../sass/layout/_content-web.scss */
+  .content-web section > header {
+    float: left;
+    width: 100%;
+  }
+}
+/* line 38, ../sass/layout/_content-web.scss */
+.content-web section > header > h1 {
+  font-size: 2.75em;
+  bottom: 1.3em;
+  position: absolute;
+  left: 2em;
+  color: white;
+}
+/* line 47, ../sass/layout/_content-web.scss */
+.content-web section > .wrapper-web {
+  margin-left: 8.33333%;
   position: relative;
   float: left;
   width: 83.33333%;
@@ -237,31 +391,68 @@ body > container > row > .nav-content {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  width: 100%;
-  padding-right: 0;
-  padding-left: 30px;
-  margin: 0;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 10, ../sass/layout/_content-web.scss */
-  .content-web section {
+  /* line 47, ../sass/layout/_content-web.scss */
+  .content-web section > .wrapper-web {
     margin-left: 8.33333%;
   }
 }
 @media (min-width: 768px) {
-  /* line 10, ../sass/layout/_content-web.scss */
-  .content-web section {
+  /* line 47, ../sass/layout/_content-web.scss */
+  .content-web section > .wrapper-web {
     float: left;
-    width: 83.33333%;
+    width: 100%;
   }
 }
-/* line 22, ../sass/layout/_content-web.scss */
+@media (min-width: 992px) {
+  /* line 47, ../sass/layout/_content-web.scss */
+  .content-web section > .wrapper-web {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 47, ../sass/layout/_content-web.scss */
+  .content-web section > .wrapper-web {
+    float: left;
+    width: 100%;
+  }
+}
+/* line 55, ../sass/layout/_content-web.scss */
+.content-web section > .wrapper-web h2 {
+  font-size: 1.1em;
+}
+/* line 64, ../sass/layout/_content-web.scss */
 .content-web .profile img {
   width: 140px;
   float: left;
 }
-/* line 27, ../sass/layout/_content-web.scss */
+/* line 73, ../sass/layout/_content-web.scss */
 .content-web .profile h2 {
-  font-size: 15px;
+  font-size: 1em;
   font-weight: bold;
+}
+/* line 83, ../sass/layout/_content-web.scss */
+.content-web .education article:first-child > img {
+  width: 8em;
+  float: left;
+}
+/* line 89, ../sass/layout/_content-web.scss */
+.content-web .education article:nth-child(2) > img {
+  width: 3.125em;
+  float: left;
+}
+/* line 95, ../sass/layout/_content-web.scss */
+.content-web .education article:last-child > img {
+  width: 5.19em;
+  float: left;
 }

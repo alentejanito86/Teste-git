@@ -1,3 +1,4 @@
+
 .my-menu {
 	float: left;
 	position: fixed;
@@ -5,17 +6,29 @@
 	width: 50px;
 	padding: 0;
 	background-color: $second-color;
-	box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 5px 0px 10px rgba(0,0,0,.2)!important;
 	z-index: 4;
+
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
 	@media (min-width: $screen-md-min){
 		width: 282px;
-			
-			}
+		box-shadow: 5px 0px 10px rgba(0,0,0,.2)!important;
+	}
 			
 
 	>.nav-logo{
 		
+		width: 0;
+		height: 0;
+		text-indent: -666em;
+		overflow: hidden;
+
+		@media (min-width: $screen-md-min) {
+
 		width: $container-md;
 		width:100%;
 		min-width: 282px;
@@ -23,6 +36,10 @@
 		background-color: $primary-color();
 		padding-top: 80px;
 		padding-bottom: 20px; 
+		-webkit-transition: all 0.5s ease;
+	    -moz-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+	    transition: all 0.5s ease;
 
 		>h1{
 			text-align: right;
@@ -35,7 +52,7 @@
 			font-size: 15px;
 			padding: 0	0;
 			margin: 0	0;
-		}
+		} }
 		
 	}
 
@@ -51,11 +68,12 @@
 			flex-direction: row;
 			width: 100%;
 			cursor: pointer;
-			text-align: center;
+			text-align: left;
+			padding-left: 30%;
 			padding-top: 15px;
 			padding-bottom: 15px;
 			border-bottom: 1px solid #EEE;
-			justify-content: center;
+			/*justify-content: center;*/
 			align-items: center;
 			text-decoration: none;
 			
