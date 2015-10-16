@@ -1,40 +1,39 @@
 .content-web{
-	@include make-xs-column(12);
-	@include make-sm-column(12);
-	@include make-md-column(12);
 	@include make-lg-column(12);
+	@include make-md-column(12);
+	@include make-sm-column(12);
+	@include make-xs-column(12);
 	
 	z-index: 3;
-	background-color: rgba($second-color,.7)!important;
-
 	float: left;
 	padding-right: 0;
 	padding-left: 50px;
+	height: 100%;
 
 	@media (min-width: $screen-md-min){
-		padding-left: 282px;
+		padding-left: 250px;
 	}
 
 	section {
-		@include make-xs-column(12);
-		@include make-sm-column(12);
-		@include make-md-column(12);
 		@include make-lg-column(12);
+		@include make-md-column(12);
+		@include make-sm-column(12);
+		@include make-xs-column(12);
 			
 		width: 100%;
 		padding-right: 0;
 		padding-left: 0;
 		margin: 0;
-		
+		background-color: rgba($second-color,.8)!important;
 		/*header blue equal all pages*/
 		> header {
 			
-			@include make-xs-column(12);
-			@include make-sm-column(12);
-			@include make-md-column(12);
 			@include make-lg-column(12);
+			@include make-md-column(12);
+			@include make-sm-column(12);
+			@include make-xs-column(12);
 			position: relative;
-			box-shadow: 0px 5px 15px rgba(0, 0, 0, .2)!important;
+			box-shadow: 0px 5px 15px rgba(0, 0, 0, .2);
 
 			> h1 {
 				font-size: 2.75em;
@@ -42,61 +41,236 @@
 				position: absolute;
 				left: 2em;
 				color: white;
+				border-bottom: 3px solid white;
 			}
 		}
 
 		> .wrapper-web {
+			@include make-lg-column-offset(1);
+			@include make-lg-column(10);
+			@include make-md-column-offset(1);
+			@include make-md-column(10);
+			@include make-sm-column-offset(1);	
+			@include make-sm-column(10);
 			@include make-xs-column-offset(1);
 			@include make-xs-column(10);
-			@include make-sm-column-offset(1);
-			@include make-sm-column(12);
-			@include make-md-column(12);
-			@include make-lg-column(12);
-			
+				
 			h2 {
 				font-size: 1.1em;/*size all text */
+				line-height: 2.1em;
+				font-weight: bold;
 			}
-
+			h3 {
+				font-size: 1.1em;
+			}
 		}
-
 	}
 	
 	.profile{
-		img{
-			width: 140px;
-			float: left;
-		}
+		
+		height: 100%;
+	
+		> .wrapper-web {
+			padding-top: 10em;
+			padding-left: 0em;
+			margin-left: 1em;
 
-		h1 {
+			> img{
+				width: 140px;
+				float: left;
+			}
 			
+			> .my-info {
+				
+				padding-left: 12em;
+				padding-top: 9em;
+				
+				> h1 {
+					
+				}
+
+				> h2{
+					font-size: 1em;
+					font-weight: bold;
+					margin: 0;
+					margin-top: 1em;
+
+					> i {
+						padding-right: 1em;
+						color: $third-color;					
+					}
+				}
+			}
 		}
 
-		h2{
-			font-size: 1em;
-			font-weight: bold;
-		}
+		@media (min-width: $screen-md-min) {
+			padding-top: 15em;
+		}	
 	}
 
 	.education {
 			
-		article:first-child {
-			> img {
-				width: 8em;
-				float: left;
+		
+
+		article {
+
+			margin-top: 2.4em;
+			border-bottom: 2px solid $primary-color;	
+			padding-bottom: 2.4em;
+			img {
+				margin-right: 1.4em;
+			
+					@media (min-width: $screen-sm-min) {
+						float: left;
+					}	
 			}
+			
+			.h3-web {
+				float: left;
+				margin: 0;
+				padding-right: 1em;
+				border-right: 1px solid $third-color;
+				margin-right: 1em;
+			}
+
+			.h3-year {
+				margin: 0;
+			}
+
+		}
+
+		article:first-child {			
+			> img {
+				width: 8em;	
+			}	
 		}
 		article:nth-child(2){
 			> img {
 				width: 3.125em;
-				float: left;
 			}
 		}
 		article:last-child {
+			border-bottom: none;
 			> img {
 				width: 5.19em;
-				float: left;
+			}
+			.h3-web {
+				float: none;
+				border-right: none;
 			}
 		}
 	}
 
+	.experience {
+
+		article {
+			margin-top: 2.4em;
+			border-bottom: 2px solid $primary-color;	
+			padding-bottom: 2.4em;
+			img {
+				margin-right: 1.4em;
+				float: left;	
+			}
+			
+			h2 {
+				float: left;
+				margin: 0;
+				padding: 0;
+				border-right: 1px solid $third-color;
+				padding-right: 1em;
+				margin-right: 1em;
+			}
+			.h3-web {
+				margin: 0;
+				padding: 0;
+				line-height: 2.1em;
+			}
+		}
+		
+		article:first-child { /*Design by art*/
+			> img {
+				width: 6em;
+			}
+		}
+		article:nth-child(2){ /*Biago Media*/
+			> img {
+				width: 8em; 
+			}
+		}
+		article:nth-child(3){ /*Police Forces*/
+			> img {
+				width: 3.43em;
+				margin-top: -1em;
+			}
+		}
+		article:nth-child(4){ /*Lifeguard*/
+			> img {
+				width: 3.62em;
+			}
+		}
+		article:last-child { /*Military Navy*/
+			
+			border-bottom: none;
+
+			> img {
+				width: 3.62em;
+			}
+
+		}
+	}
+
+	.projects {
+		
+		margin: 0;	
+		.wrapper-web{
+				
+		}
+		article {
+
+			@include make-xs-column(12);
+			@include make-sm-column(6);
+			@include make-md-column(6);
+			@include make-lg-column(3);
+			
+			padding: 1em;
+			width: 100%;
+
+			/*background-color: red;*/
+
+			div[class^="project-"] {
+				background-color: rgba(255,255,255,.5);
+				box-shadow: 1px 1px 7px rgba(0,0,0,.5);
+				div {
+					width: 100%;
+					height: 20em;
+					background-size: cover;
+				}
+
+			}
+
+			.project-1 {
+				 div {
+					background-image: url('../img/ferdimar.png');
+				}
+			}
+			.project-2 {
+				> div {
+					background-image: url('../img/di-stone.png');
+				}
+			}
+			.project-3 {
+				> div {
+					background-image: url('../img/dbyart.png');
+				}
+			}
+			.project-4 {
+				> div {
+					background-image: url('../img/minorsa.png');
+				}
+			}	
+		}
+		
+	}
 }
+
+
