@@ -72,15 +72,9 @@
 		
 		> .wrapper-web {
 			
-			@include make-xs-column(12);
 			padding-left: 0em;
 			padding-top: 5em;
-			/*margin-left: 1em;*/
-
-			/*> img{ /* MY IMAGE ERASE
-				width: 140px;
-				float: left;
-			}*/
+			
 			> #draw-pc {
 				@include make-xs-column-offset(1);
 				@include make-xs-column(10);
@@ -90,37 +84,35 @@
 				@include make-md-column(8);
 				@include make-lg-column-offset(1);
 				@include make-lg-column(7);
-
-				> svg {
-			/*max-width: 55em;*/
-				}
+				
 			}
 			> .my-info {
 			
 				@include make-xs-column(12);
-				
-				@include make-sm-column(12);
-				
+				@include make-sm-column(12);				
 				@include make-md-column(12);
-				
 				@include make-lg-column(4);
-
-				padding-left: 25%;
 				
-				@media (min-width: $screen-sm-min) {
-					padding-left: 35%;
-				}
-				@media (min-width: $screen-md-min) {
-					padding-left: 35%;
-				}
-				@media (min-width: $screen-lg-min) {
-					padding-left: 0;
-				}
+				text-align: center;
+				padding: 0em;
+
+					
+					@media (min-width: $screen-lg-min) {
+						float: left !important;
+						width: auto !important;
+						padding: 0;
+						text-align: left;							 
+					}
 
 				> h1 {
 					
 				}
-
+				
+				> h2:first-child{
+					font-size: 2em;
+					text-transform: uppercase;
+					margin:0;
+				}
 				> h2{
 					font-size: 1em;
 					font-weight: bold;

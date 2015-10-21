@@ -13,6 +13,24 @@
   /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);*/
 }
 
+@keyframes fadeIn {
+  /* line 13, ../sass/base/_normalize.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+/* line 18, ../sass/base/_normalize.scss */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn .50s ease-in 1 forwards;
+}
+
+/* line 23, ../sass/base/_normalize.scss */
+.is-paused {
+  animation-play-state: paused;
+}
+
 /* line 1, ../sass/base/_base.scss */
 html {
   height: 100%;
@@ -407,21 +425,10 @@ body > container > row > .nav-content {
 }
 /* line 73, ../sass/layout/_content-web.scss */
 .content-web .profile > .wrapper-web {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
   padding-left: 0em;
   padding-top: 5em;
-  /*margin-left: 1em;*/
-         /*> img{ /* MY IMAGE ERASE
-	width: 140px;
-	float: left;
-}*/
 }
-/* line 84, ../sass/layout/_content-web.scss */
+/* line 78, ../sass/layout/_content-web.scss */
 .content-web .profile > .wrapper-web > #draw-pc {
   margin-left: 8.33333%;
   position: relative;
@@ -444,49 +451,45 @@ body > container > row > .nav-content {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 84, ../sass/layout/_content-web.scss */
+  /* line 78, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > #draw-pc {
     margin-left: 8.33333%;
   }
 }
 @media (min-width: 768px) {
-  /* line 84, ../sass/layout/_content-web.scss */
+  /* line 78, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > #draw-pc {
     float: left;
     width: 83.33333%;
   }
 }
 @media (min-width: 992px) {
-  /* line 84, ../sass/layout/_content-web.scss */
+  /* line 78, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > #draw-pc {
     margin-left: 16.66667%;
   }
 }
 @media (min-width: 992px) {
-  /* line 84, ../sass/layout/_content-web.scss */
+  /* line 78, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > #draw-pc {
     float: left;
     width: 66.66667%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 84, ../sass/layout/_content-web.scss */
+  /* line 78, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > #draw-pc {
     margin-left: 8.33333%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 84, ../sass/layout/_content-web.scss */
+  /* line 78, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > #draw-pc {
     float: left;
     width: 58.33333%;
   }
 }
-/* line 94, ../sass/layout/_content-web.scss */
-.content-web .profile > .wrapper-web > #draw-pc > svg {
-  /*max-width: 55em;*/
-}
-/* line 98, ../sass/layout/_content-web.scss */
+/* line 89, ../sass/layout/_content-web.scss */
 .content-web .profile > .wrapper-web > .my-info {
   position: relative;
   float: left;
@@ -506,55 +509,53 @@ body > container > row > .nav-content {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-left: 25%;
+  text-align: center;
+  padding: 0em;
 }
 @media (min-width: 768px) {
-  /* line 98, ../sass/layout/_content-web.scss */
+  /* line 89, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > .my-info {
     float: left;
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  /* line 98, ../sass/layout/_content-web.scss */
+  /* line 89, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > .my-info {
     float: left;
     width: 100%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 98, ../sass/layout/_content-web.scss */
+  /* line 89, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > .my-info {
     float: left;
     width: 33.33333%;
   }
 }
-@media (min-width: 768px) {
-  /* line 98, ../sass/layout/_content-web.scss */
-  .content-web .profile > .wrapper-web > .my-info {
-    padding-left: 35%;
-  }
-}
-@media (min-width: 992px) {
-  /* line 98, ../sass/layout/_content-web.scss */
-  .content-web .profile > .wrapper-web > .my-info {
-    padding-left: 35%;
-  }
-}
 @media (min-width: 1200px) {
-  /* line 98, ../sass/layout/_content-web.scss */
+  /* line 89, ../sass/layout/_content-web.scss */
   .content-web .profile > .wrapper-web > .my-info {
-    padding-left: 0;
+    float: left !important;
+    width: auto !important;
+    padding: 0;
+    text-align: left;
   }
 }
-/* line 124, ../sass/layout/_content-web.scss */
+/* line 111, ../sass/layout/_content-web.scss */
+.content-web .profile > .wrapper-web > .my-info > h2:first-child {
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* line 116, ../sass/layout/_content-web.scss */
 .content-web .profile > .wrapper-web > .my-info > h2 {
   font-size: 1em;
   font-weight: bold;
   margin: 0;
   margin-top: 1em;
 }
-/* line 130, ../sass/layout/_content-web.scss */
+/* line 122, ../sass/layout/_content-web.scss */
 .content-web .profile > .wrapper-web > .my-info > h2 > i {
   padding-right: 1em;
   color: #1e1e1e;
@@ -565,23 +566,23 @@ body > container > row > .nav-content {
     padding-top: 10em;
   }
 }
-/* line 147, ../sass/layout/_content-web.scss */
+/* line 139, ../sass/layout/_content-web.scss */
 .content-web .education article {
   margin-top: 2.4em;
   border-bottom: 2px solid #29abe2;
   padding-bottom: 2.4em;
 }
-/* line 152, ../sass/layout/_content-web.scss */
+/* line 144, ../sass/layout/_content-web.scss */
 .content-web .education article img {
   margin-right: 1.4em;
 }
 @media (min-width: 768px) {
-  /* line 152, ../sass/layout/_content-web.scss */
+  /* line 144, ../sass/layout/_content-web.scss */
   .content-web .education article img {
     float: left;
   }
 }
-/* line 160, ../sass/layout/_content-web.scss */
+/* line 152, ../sass/layout/_content-web.scss */
 .content-web .education article .h3-web {
   float: left;
   margin: 0;
@@ -589,43 +590,43 @@ body > container > row > .nav-content {
   border-right: 1px solid #1e1e1e;
   margin-right: 1em;
 }
-/* line 168, ../sass/layout/_content-web.scss */
+/* line 160, ../sass/layout/_content-web.scss */
 .content-web .education article .h3-year {
   margin: 0;
 }
-/* line 175, ../sass/layout/_content-web.scss */
+/* line 167, ../sass/layout/_content-web.scss */
 .content-web .education article:first-child > img {
   width: 8em;
 }
-/* line 180, ../sass/layout/_content-web.scss */
+/* line 172, ../sass/layout/_content-web.scss */
 .content-web .education article:nth-child(2) > img {
   width: 3.125em;
 }
-/* line 184, ../sass/layout/_content-web.scss */
+/* line 176, ../sass/layout/_content-web.scss */
 .content-web .education article:last-child {
   border-bottom: none;
 }
-/* line 186, ../sass/layout/_content-web.scss */
+/* line 178, ../sass/layout/_content-web.scss */
 .content-web .education article:last-child > img {
   width: 5.19em;
 }
-/* line 189, ../sass/layout/_content-web.scss */
+/* line 181, ../sass/layout/_content-web.scss */
 .content-web .education article:last-child .h3-web {
   float: none;
   border-right: none;
 }
-/* line 198, ../sass/layout/_content-web.scss */
+/* line 190, ../sass/layout/_content-web.scss */
 .content-web .experience article {
   margin-top: 2.4em;
   border-bottom: 2px solid #29abe2;
   padding-bottom: 2.4em;
 }
-/* line 202, ../sass/layout/_content-web.scss */
+/* line 194, ../sass/layout/_content-web.scss */
 .content-web .experience article img {
   margin-right: 1.4em;
   float: left;
 }
-/* line 207, ../sass/layout/_content-web.scss */
+/* line 199, ../sass/layout/_content-web.scss */
 .content-web .experience article h2 {
   float: left;
   margin: 0;
@@ -634,59 +635,59 @@ body > container > row > .nav-content {
   padding-right: 1em;
   margin-right: 1em;
 }
-/* line 215, ../sass/layout/_content-web.scss */
+/* line 207, ../sass/layout/_content-web.scss */
 .content-web .experience article .h3-web {
   margin: 0;
   padding: 0;
   line-height: 2.1em;
 }
-/* line 222, ../sass/layout/_content-web.scss */
+/* line 214, ../sass/layout/_content-web.scss */
 .content-web .experience article:first-child {
   /*Design by art*/
 }
-/* line 223, ../sass/layout/_content-web.scss */
+/* line 215, ../sass/layout/_content-web.scss */
 .content-web .experience article:first-child > img {
   width: 6em;
 }
-/* line 227, ../sass/layout/_content-web.scss */
+/* line 219, ../sass/layout/_content-web.scss */
 .content-web .experience article:nth-child(2) {
   /*Biago Media*/
 }
-/* line 228, ../sass/layout/_content-web.scss */
+/* line 220, ../sass/layout/_content-web.scss */
 .content-web .experience article:nth-child(2) > img {
   width: 8em;
 }
-/* line 232, ../sass/layout/_content-web.scss */
+/* line 224, ../sass/layout/_content-web.scss */
 .content-web .experience article:nth-child(3) {
   /*Police Forces*/
 }
-/* line 233, ../sass/layout/_content-web.scss */
+/* line 225, ../sass/layout/_content-web.scss */
 .content-web .experience article:nth-child(3) > img {
   width: 3.43em;
   margin-top: -1em;
 }
-/* line 238, ../sass/layout/_content-web.scss */
+/* line 230, ../sass/layout/_content-web.scss */
 .content-web .experience article:nth-child(4) {
   /*Lifeguard*/
 }
-/* line 239, ../sass/layout/_content-web.scss */
+/* line 231, ../sass/layout/_content-web.scss */
 .content-web .experience article:nth-child(4) > img {
   width: 3.62em;
 }
-/* line 243, ../sass/layout/_content-web.scss */
+/* line 235, ../sass/layout/_content-web.scss */
 .content-web .experience article:last-child {
   /*Military Navy*/
   border-bottom: none;
 }
-/* line 247, ../sass/layout/_content-web.scss */
+/* line 239, ../sass/layout/_content-web.scss */
 .content-web .experience article:last-child > img {
   width: 3.62em;
 }
-/* line 254, ../sass/layout/_content-web.scss */
+/* line 246, ../sass/layout/_content-web.scss */
 .content-web .projects {
   margin: 0;
 }
-/* line 260, ../sass/layout/_content-web.scss */
+/* line 252, ../sass/layout/_content-web.scss */
 .content-web .projects article {
   position: relative;
   float: left;
@@ -711,50 +712,50 @@ body > container > row > .nav-content {
   /*background-color: red;*/
 }
 @media (min-width: 768px) {
-  /* line 260, ../sass/layout/_content-web.scss */
+  /* line 252, ../sass/layout/_content-web.scss */
   .content-web .projects article {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  /* line 260, ../sass/layout/_content-web.scss */
+  /* line 252, ../sass/layout/_content-web.scss */
   .content-web .projects article {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 260, ../sass/layout/_content-web.scss */
+  /* line 252, ../sass/layout/_content-web.scss */
   .content-web .projects article {
     float: left;
     width: 25%;
   }
 }
-/* line 272, ../sass/layout/_content-web.scss */
+/* line 264, ../sass/layout/_content-web.scss */
 .content-web .projects article div[class^="project-"] {
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
 }
-/* line 275, ../sass/layout/_content-web.scss */
+/* line 267, ../sass/layout/_content-web.scss */
 .content-web .projects article div[class^="project-"] div {
   width: 100%;
   height: 20em;
   background-size: cover;
 }
-/* line 284, ../sass/layout/_content-web.scss */
+/* line 276, ../sass/layout/_content-web.scss */
 .content-web .projects article .project-1 div {
   background-image: url("../img/ferdimar.png");
 }
-/* line 289, ../sass/layout/_content-web.scss */
+/* line 281, ../sass/layout/_content-web.scss */
 .content-web .projects article .project-2 > div {
   background-image: url("../img/di-stone.png");
 }
-/* line 294, ../sass/layout/_content-web.scss */
+/* line 286, ../sass/layout/_content-web.scss */
 .content-web .projects article .project-3 > div {
   background-image: url("../img/dbyart.png");
 }
-/* line 299, ../sass/layout/_content-web.scss */
+/* line 291, ../sass/layout/_content-web.scss */
 .content-web .projects article .project-4 > div {
   background-image: url("../img/minorsa.png");
 }
