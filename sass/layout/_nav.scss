@@ -6,7 +6,7 @@
 	width: 50px;
 	padding: 0;
 	background-color: $second-color;
-	box-shadow: 5px 0px 10px rgba(0,0,0,.2)!important;
+	box-shadow: 5px 0px 10px rgba(0,0,0,.4);
 	z-index: 4;
 
 	-webkit-transition: all 0.5s ease;
@@ -24,6 +24,7 @@
 		width: 0;
 		height: 0;
 		text-indent: -666em;
+		color:$second-color;
 		overflow: hidden;
 
 		@media (min-width: $screen-md-min) {
@@ -32,7 +33,7 @@
 		width:100%;
 		min-width: 250px;
 		height: 250px;
-		background-color: $primary-color();
+		background-color: $third-color();
 		padding-top: 80px;
 		padding-bottom: 20px; 
 		-webkit-transition: all 0.5s ease;
@@ -43,14 +44,14 @@
 		>h1{
 			text-align: right;
 			font-size: 45px;
-			margin: 0 0;
+			margin: 0 10px;
 		}
 
 		>h2{
 			text-align: right;
 			font-size: 15px;
 			padding: 0	0;
-			margin: 0	0;
+			margin: 0 10px;
 		} }
 		
 	}
@@ -71,7 +72,6 @@
 			padding-left: 30%;
 			padding-top: 15px;
 			padding-bottom: 15px;
-			border-bottom: 1px solid #EEE;
 			/*justify-content: center;*/
 			align-items: center;
 			text-decoration: none;
