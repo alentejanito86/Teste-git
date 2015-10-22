@@ -9,6 +9,7 @@
 	padding-right: 0;
 	padding-left: 50px;
 	height: 100%;
+	color: $second-color;
 
 	@media (min-width: $screen-md-min){
 		padding-left: 250px;
@@ -67,11 +68,9 @@
 	}
 	
 	.profile{
-		
 		height: 100%;
-		
-		> .wrapper-web {
-			
+
+		> .wrapper-web {			
 			padding-left: 0em;
 			padding-top: 5em;
 			
@@ -83,32 +82,22 @@
 				@include make-md-column-offset(2);
 				@include make-md-column(8);
 				@include make-lg-column-offset(1);
-				@include make-lg-column(7);
-				
+				@include make-lg-column(7);		
 			}
 			> .my-info {
-			
 				@include make-xs-column(12);
 				@include make-sm-column(12);				
 				@include make-md-column(12);
 				@include make-lg-column(4);
-				
 				text-align: center;
 				padding: 0em;
-
-					
 					@media (min-width: $screen-lg-min) {
 						float: left !important;
 						width: auto !important;
 						padding: 0;
 						text-align: left;							 
 					}
-
-				> h1 {
-					
-				}
-				
-				> h2:first-child{
+				> h2:first-child {
 					font-size: 2em;
 					text-transform: uppercase;
 					margin:0;
@@ -121,7 +110,55 @@
 
 					> i {
 						padding-right: 1em;
-						color: $third-color;					
+						color: $primary-color;					
+					}
+				}
+				@media (min-width: 1650px){
+					h2:first-child {
+						font-size: 3em;
+						margin: 0;
+						padding: 0;
+					}
+					h2 {
+						font-size: 1.2em;
+						
+					}
+				}
+			}
+			> .footer-profile {
+				@include make-xs-column(12);
+				@include make-sm-column(12);				
+				@include make-md-column(12);
+				@include make-lg-column(12);
+				text-align: center;
+				
+
+				> h1 {
+					text-transform: uppercase;
+					font-size: 1.5em;		
+				}
+				@media (min-width: $screen-lg-min) {
+					margin-left: -10%;
+
+					h1 {	
+						margin-top: 1em;
+						font-size: 2.2em;
+					}
+				}
+			.fotter-profile__img {
+					width: 55px;
+					height: 121px;
+					overflow: hidden;
+					margin-left: auto;
+					margin-right: auto;
+					margin-top: 4em;
+					> img {
+						margin-top: -121px;
+						
+					}
+					img:hover {
+						margin-top: 0px;
+						
 					}
 				}
 			}
