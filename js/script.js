@@ -21,6 +21,30 @@ $(function() {
 
   })
 });
+
+
+$(window).on('resize',function() {
+    var ecra = $(window).width();
+  if (ecra < 970) {
+    $(".my-menu").css({"bottom":"0px"});    
+  } 
+  else 
+  {
+    $(".my-menu").css({"left":"0px"});
+  }
+});
+$(document).ready(function() {
+    $(window).trigger('resize');
+});
+
+
+$(function(){
+  var largura = $(".wrapper-web").width();
+  var altura = ($(window).height() - 140);
+  $(".row__carousel").css({"width":largura, "height":altura});
+  console.log(altura);
+});
+
 /*
 $(document).ready(function() {
 

@@ -18,3 +18,17 @@ $L:     1170px;
   }
 }
 
+@mixin mx_blur($int){
+	-webkit-filter: blur($int);
+	-moz-filter: blur($int);
+	-o-filter: blur($int);
+	-ms-filter: blur($int);
+	filter: blur($int);
+}
+
+@mixin mx_transition($property, $duration, $timing, $delay){
+  -webkit-transition: $property $duration $timing $delay;
+  -moz-transition: $property $duration $timing $delay;
+  -o-transition: $property $duration $timing $delay;
+  transition: $property $duration $timing $delay;
+}

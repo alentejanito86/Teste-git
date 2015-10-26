@@ -1,12 +1,17 @@
 html{
 	height: 100%;
 	
+	
+
 	> body {
 	    position: relative;
 		height: 100%;
 		min-width: 100%;
 		font-family: 'Cutive Mono';
 
+		
+
+		
 		h1 {
 			font-family: 'Anonymous Pro' !important ;
 		}
@@ -28,6 +33,7 @@ html{
 		}
 
 		.container-web {
+
 			@include make-row();
 			@include make-sm-column(12);
 
@@ -46,6 +52,30 @@ html{
 		    -moz-transition: all 0.5s ease;
 		    -o-transition: all 0.5s ease;
 		    transition: all 0.5s ease;
+		}
+		@media (max-width: $screen-sm-max) and (orientation: landscape) {
+			
+			> .screen-landscape {
+				display: block;
+				position: relative;
+				z-index: 2;
+				color: $second-color;
+				width: 80%;
+				margin: 0 auto 0 auto;
+				padding-top: 20%; 
+
+				> h1 {
+					font-size: 2em;
+				}
+				> h2 {
+					font-size: 1.5em;
+				}
+			}
+
+			> .container-web {
+				display: none;
+			}
+
 		}
 	}
 }
